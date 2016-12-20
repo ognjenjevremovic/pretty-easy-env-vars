@@ -1,0 +1,28 @@
+{
+  "name": "pretty-easy-env-vars",
+  "version": "0.0.1",
+  "description": "Easy setting and retrieving environment variables from a file",
+  "author": "Ognjen Jevremović <jevremovic.ognjen@gmail.com> (https://github.com/ognjenjevremovic)",
+  "homepage": "https://github.com/ognjenjevremovic/pretty-easy-env-vars",
+  "bugs": {
+    "url": "https://github.com/ognjenjevremovic/pretty-easy-env-vars/issues",
+    "email": "ognjen.jevremovic@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ognjenjevremovic/pretty-easy-env-vars.git"
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "pretty-easy-env-vars",
+    "pretty-easy-*",
+    "env-vars",
+    "prettyeasy",
+    "environment variables",
+    "env vars"
+  ],
+}
