@@ -25,4 +25,7 @@
     "environment variables",
     "env vars"
   ],
+  "dependencies": {
+    "pretty-easy-logs": "^0.1.2"
+  }
 }

@@ -1,0 +1,10 @@
+                       Date: 21.12.2016 - Time: 14:54:47
+
+                       = > Invalid file containing environment variables
+                       = > File must be in either of the formats : 
+                       = > .envVars
+                       = > .json
+                       = > .txt
+
+
+
