@@ -30,9 +30,9 @@ You are **strongly encouraged *NOT!* to** include the file containing environmen
 &nbsp;
 
 ### *Why use this module?*
-Version control systems such as **Git** alows us to share our work with other like-minded developers and get their help in debugging and deploying our ideas (read *software*). But sometimes, we don't want our *sensitive information* (such as **passwords** and **API keys**) to be included in our public repositories and be seen by everyone.
+Version control systems such as **Git** allows us to share our work with other like-minded developers and get their help in debugging and deploying our ideas (read *software*). But sometimes, we don't want our *sensitive information* (such as **passwords** and **API keys**) to be included in our public repositories and be seen by everyone.
 However, removing those by hand each time we want to make a commit or defining a *commit task* (in build tools such as *Gulp* or *Grunt*) that would automate the process of masking sensitive info, is not an easy task.
-But, we don't want our **passwords, IP adresses, port numbers, hashes and API keys** exposed; don't we?!
+But, we don't want our **passwords, IP addresses, port numbers, hashes and API keys** exposed; don't we?!
 
 That's where this module comes in handy!
 
@@ -41,8 +41,8 @@ The file could either be a UNIX hidden file (with it's name prefixed with a dot)
 
 ### *How to use this module?*
 By default the module requires ***'.envVars'*** file in the root of your project, populated with ***key=value*** pairs.
-However, you could define another file (either in ***'.txt'*** or ***'.json'*** format) and pass it's name (and optionaly **filepath** - if it's not located in the root of your project; and **file extension** - if the file is not in *'.envVars'* extension) to the function call.
-You're advised to set your environment variables from within your main entry point file (*'server.js'*, *'app.js'*, *'index.js'* or *'howeverYouCall_It.js'*) at the very begginig.
+However, you could define another file (either in ***'.txt'*** or ***'.json'*** format) and pass it's name (and optionally **file path** - if it's not located in the root of your project; and **file extension** - if the file is not in *'.envVars'* extension) to the function call.
+You're advised to set your environment variables from within your main entry point file (*'server.js'*, *'app.js'*, *'index.js'* or *'howeverYouCall_It.js'*) at the very beginning.
 
 &nbsp;
 
@@ -55,7 +55,7 @@ $ npm install pretty-easy-env-vars
 &nbsp;
 
 # Usage
-After installing the module (localy in your project directory), in order to use it in your file you first need to require it.
+After installing the module (locally in your project directory), in order to use it in your file you first need to require it.
 ```javascript
 var envVars = require('pretty-easy-env-vars');
 ```
@@ -78,7 +78,7 @@ The most simplest use is to call the function returned by the module (without an
 var envVars = require('pretty-easy-env-vars');
 
 // 	Set environment variables, from within '.envVars' file  
-//	located in the root of the project (default filename, filepath, file extension)
+//	located in the root of the project (default filename, file path, file extension)
 envVars();
 ```
 
@@ -88,16 +88,16 @@ If you'd like to store your environment variables in the file other than *'.envV
 However, there are few things to note:
 
 - supported file formats are : ***'.envVars'***, ***'.txt'***, ***'.json'***,
-- you should include the full filename (including the file extension) - *i.e* ***'vars.txt'***,
-- file should be located in the root of your applicaton,
-- only files prefixed with a '.' (dot) are automaticly excluded from the version control systems (such as *Git*); if however, you don't want to prefix your file with a dot, you'll need to put the filename to your **.gitignore** file, in order NOT to include it to version control system.
+- you should include the full filename (including the file extension) -> *i.e* ***'vars.txt'*** or default ***'envVars'*** extension will be used instead,
+- file should be located in the root of your application,
+- only files prefixed with a '.' (dot) are automatically excluded from the version control systems (such as *Git*); if however, you don't want to prefix your file with a dot, you'll need to put the filename to your **.gitignore** file, in order NOT to include it to version control system.
 
 ```javascript
 //	Require the module
 var envVars = require('pretty-easy-env-vars');
 
 // 	Set environment variables, from within 'my-variables.txt' file  
-//	located in the root of the project (default filepath)
+//	located in the root of the project (default file path)
 envVars('my-variables.txt');
 ```
 
@@ -107,18 +107,18 @@ If you'd like to preserve the default file format (*'.envVars'*), but name your 
 var envVars = require('pretty-easy-env-vars');
 
 // 	Set environment variables, from within 'myvars.envVars' file  
-//	located in the root of the project (default filepath, extension)
+//	located in the root of the project (default file path, extension)
 envVars('myvars');
 ```
 
 ***Important!***
 When passing a string parameter, the file containing your *sensitive information* (that you want to set as an environment variable) **must** be located in the root of your application!
-If you'd like to change the filepath, you'll need to pass *Object literal* instead.
+If you'd like to change the file path, you'll need to pass *Object literal* instead.
 
 ### 3. Object literal parameter supplied
 When passing an Object literal parameter, the ***'fileName'*** property must be set on the Object, otherwise the default values are used instead.
 Properties that are considered valid for the Object parameter passed:
-- **fileName** - which defines the name of the file (file extension can be included, if not included in the *fileExtension* property),
+- **fileName** - which defines the name of the file (full file name, including the extension or without the extension - if file extension is defined here, it will not be overwritten with a value from 'fileExtension' property),
 - **fileExtension** - defining the extension of the file (supported files extensions are *envVars*, *txt*, *json*) - without a ***.*** (very important!),
 - **filePath** - which defines the **relative** path to your file (from the *__dirname* perspective).
 
@@ -137,13 +137,13 @@ envOptions.fileName = 'myvars';
 envOptions.fileExtension = 'txt';
 
 // 	Set environment variables, from within 'myvars.txt' file  
-//	located in the root of the project (default filepath)
+//	located in the root of the project (default file path)
 envVars(envOptions);
 ```
 
 &nbsp;
 
-### Syntaxt
+### Syntax
 ##### For *.envVars* and *.txt* files :
 
 ```sh
