@@ -1,13 +1,13 @@
 {
-    "name" :    "Ognjen",
-    "surname" : "Jevremović",
+    "name" :    "OGNJEN",
+    "surname" : "JEVREMOVIĆ",
     "age" :     "22",
-    "city" :    "Belgrade",
+    "city" :    "BELGRADE",
     "country" : "RS",
     "bool" : false,
     "numb" : 0,
     "someArr"  : [1,2,3],
-    "someObj"  : {"a" : 1, "b" : 2, "c" : 3},
+    "someObj"  : {"A" : 1, "B" : 2, "C" : 3},
     "emptyString" : "",
     "emptyArr" : [],
     "emptyObj" : {}
