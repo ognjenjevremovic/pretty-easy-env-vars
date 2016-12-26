@@ -1,6 +1,6 @@
 {
   "name": "pretty-easy-env-vars",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Easy setting and retrieving environment variables from a file",
   "author": "Ognjen Jevremović <jevremovic.ognjen@gmail.com> (https://github.com/ognjenjevremovic)",
   "homepage": "https://github.com/ognjenjevremovic/pretty-easy-env-vars",
