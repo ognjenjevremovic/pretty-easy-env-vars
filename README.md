@@ -143,7 +143,7 @@ envVars(envOptions);
 
 &nbsp;
 
-### Syntax
+# Syntax
 ##### For *.envVars* and *.txt* files :
 
 ```sh
